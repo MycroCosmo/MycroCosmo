@@ -4,20 +4,20 @@
 
 <p align="center">
   <strong>안녕하세요, 권성환입니다.</strong><br />
-  Java와 Spring으로 백엔드를 만들고, 프론트엔드까지 연결하는 프로젝트를 진행합니다.
+  반복 작업을 줄이는 개발 도구와 Java·Spring 기반 백엔드를 만듭니다.
 </p>
 
 <p align="center">
   <a href="https://github.com/MycroCosmo?tab=repositories">Repositories</a> ·
-  <a href="https://github.com/MycroCosmo/msa-service">Microservices</a> ·
+  <a href="https://github.com/MycroCosmo/blackbox">Developer Tools</a> ·
   <a href="https://github.com/MycroCosmo/open-api-chat-project">AI Chatbot</a>
 </p>
 
 ## About
 
 - **Backend** — Java · Spring Boot · Spring Framework
-- **Full-stack** — JSP와 JavaScript를 활용한 쇼핑몰 프로젝트
-- **Architecture** — 서비스 경계, 이벤트 통신, 데이터 정합성을 다루는 MSA 학습
+- **Developer Tools** — MyBatis 반복 CRUD 자동화 · AI 코딩 에이전트 장애 기록
+- **Architecture** — 조회 성능, 서비스 경계, 외부 저장소와 DB의 정합성
 - **AI** — Spring AI와 OpenAI API를 연결한 챗봇 프로젝트
 
 ## Tech Stack
@@ -25,30 +25,34 @@
 | 분야 | 프로젝트에서 사용한 기술 |
 | :--- | :--- |
 | Backend | Java · Spring Boot · Spring Security · Spring Data JPA · MyBatis |
-| Frontend | JavaScript · HTML · CSS · JSP · jQuery · Mustache |
+| Web & Tooling | TypeScript · JavaScript · Node.js · JSP · Mustache |
 | Data | PostgreSQL · Oracle Database |
-| Services | Spring Cloud Gateway · Consul · Apache Kafka · Spring AI |
+| Services | Google Cloud Storage · Spring Cloud Gateway · Consul · Kafka · Spring AI |
 | Build & Collaboration | Gradle · Maven · Git · GitHub |
 
 ## Selected Projects
 
-### 01 · [MSA Service](https://github.com/MycroCosmo/msa-service)
+### 01 · [MyBatis Easy Sync Starter](https://github.com/MycroCosmo/mybatis-easy-sync-starter)
 
-마이크로서비스 구조를 학습하는 e커머스 백엔드 프로젝트입니다. 사용자, 상품, 주문, 결제 서비스를 나누고 서비스 간 통신과 데이터 정합성을 다룹니다.
+직접 작성한 SQL을 유지하면서 반복 CRUD 작성을 줄이는 Java 라이브러리입니다. 런타임 SQL 병합과 컴파일 시점 Mapper/XML 검증을 별도 모듈로 제공합니다.
 
-`Java` `Spring Boot` `Spring Cloud Gateway` `Consul` `Kafka` `PostgreSQL`
+`Java` `MyBatis` `Spring Boot` `Annotation Processing` `Gradle`
 
-### 02 · [Spring AI Chatbot](https://github.com/MycroCosmo/open-api-chat-project)
+### 02 · [Photo Portfolio Backend](https://github.com/MycroCosmo/io-terraforming-back)
 
-Spring AI로 OpenAI API를 연동한 챗봇입니다. Mustache 기반 화면과 PostgreSQL을 활용한 대화 기록 저장 기능을 구현했습니다.
+사진작가의 프로젝트와 이미지를 관리하는 Spring Boot API입니다. 팀 개발 이후 N+1 조회 문제, 쓰기 API 인가, GCS와 DB 사이의 보상 처리를 개인 리팩터링으로 개선했습니다.
 
-`Java` `Spring Boot` `Spring AI` `PostgreSQL` `Mustache`
+`Java` `Spring Boot` `Spring Security` `JPA` `PostgreSQL` `Google Cloud Storage`
 
-### 03 · [ViewPort](https://github.com/MycroCosmo/mini_project_viewport)
+### 03 · [Dev Blackbox](https://github.com/MycroCosmo/blackbox)
 
-3인 팀으로 진행한 안경 온라인 쇼핑몰입니다. 전자정부 프레임워크 환경에서 인증, 상품 검색, 장바구니, 결제, 관리자 기능을 다뤘습니다.
+AI 코딩 에이전트를 위한 로컬 실행 기록 도구입니다. 개발 명령과 네트워크 실패를 기록하고, 민감 정보를 가린 장애 보고서를 만들어 디버깅 근거를 남깁니다.
 
-`Spring Framework` `MyBatis` `JSP` `JavaScript` `Oracle Database`
+`TypeScript` `Node.js` `CLI` `Incident Reports`
+
+### More Projects
+
+[MSA Service](https://github.com/MycroCosmo/msa-service) · [Spring AI Chatbot](https://github.com/MycroCosmo/open-api-chat-project) · [ViewPort](https://github.com/MycroCosmo/mini_project_viewport)
 
 ## Problem Solving
 
