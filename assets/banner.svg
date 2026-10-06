@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">MycroCosmo</title>
+  <desc id="desc">A midnight-blue constellation banner for Sunghwan Kwon's Java, Spring and full-stack projects.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101a30"/><stop offset="1" stop-color="#080e1b"/></linearGradient>
+    <radialGradient id="planet"><stop stop-color="#1d4a69"/><stop offset="1" stop-color="#101d34"/></radialGradient>
+  </defs>
+  <rect width="1200" height="320" rx="18" fill="url(#bg)"/>
+  <g fill="#b7d5ed" opacity=".5">
+    <circle cx="76" cy="43" r="1.3"/><circle cx="267" cy="35" r="1"/><circle cx="468" cy="61" r="1.4"/><circle cx="635" cy="39" r="1"/>
+    <circle cx="754" cy="81" r="1.7"/><circle cx="863" cy="38" r="1"/><circle cx="1123" cy="48" r="1.5"/><circle cx="1150" cy="252" r="1.2"/>
+    <circle cx="76" cy="266" r="1"/><circle cx="386" cy="285" r="1.2"/><circle cx="570" cy="254" r="1"/><circle cx="708" cy="282" r="1.4"/>
+    <circle cx="1006" cy="287" r="1"/><circle cx="823" cy="236" r="1.2"/><circle cx="659" cy="134" r="1"/>
+  </g>
+  <path d="M756 113L830 81L899 117L1050 69L1122 137" fill="none" stroke="#35536d" stroke-width="1"/>
+  <g fill="#6dd5ed"><circle cx="756" cy="113" r="2.5"/><circle cx="830" cy="81" r="2.5"/><circle cx="899" cy="117" r="2.5"/><circle cx="1050" cy="69" r="2.5"/><circle cx="1122" cy="137" r="2.5"/></g>
+  <circle cx="975" cy="177" r="69" fill="url(#planet)" stroke="#2e536e"/>
+  <ellipse cx="975" cy="177" rx="136" ry="35" transform="rotate(-27 975 177)" fill="none" stroke="#62b9cf" stroke-width="1.4" opacity=".65"/>
+  <ellipse cx="975" cy="177" rx="113" ry="87" transform="rotate(27 975 177)" fill="none" stroke="#46627e" stroke-width="1" opacity=".5"/>
+  <circle cx="1096" cy="117" r="5" fill="#90e4f4"/>
+  <rect x="64" y="68" width="26" height="3" rx="1.5" fill="#7bd5e6"/>
+  <text x="64" y="103" fill="#91b3ce" font-family="Segoe UI,Arial,sans-serif" font-size="13" letter-spacing="3">SUNGHWAN KWON / DEVELOPER</text>
+  <text x="60" y="177" fill="#eef5fd" font-family="Segoe UI,Arial,sans-serif" font-size="62" font-weight="700" letter-spacing="-2">MycroCosmo<tspan fill="#7bd5e6">.</tspan></text>
+  <text x="64" y="217" fill="#b7c8dc" font-family="Segoe UI,Arial,sans-serif" font-size="20">Java &amp; Spring · Backend &amp; Full-stack Projects</text>
+  <text x="64" y="269" fill="#7492ad" font-family="Segoe UI,Arial,sans-serif" font-size="12" letter-spacing="2">MICROSERVICES / AI / WEB</text>
+</svg>
