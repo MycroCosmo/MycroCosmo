@@ -32,7 +32,7 @@
 
 ## Selected Projects
 
-### 01 · [MyBatis Easy Sync Starter](https://github.com/MycroCosmo/mybatis-easy-sync-starter)
+### 01 · [MyBatis Easy Sync Starter](https://github.com/MycroCosmo/mybatis-easy-sync-starter-public)
 
 직접 작성한 SQL을 유지하면서 반복 CRUD 작성을 줄이는 Java 라이브러리입니다. 런타임 SQL 병합과 컴파일 시점 Mapper/XML 검증을 별도 모듈로 제공합니다.
 
