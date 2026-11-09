@@ -93,6 +93,8 @@ export function renderLatest(blog: Blog, post: Post, opts: LatestOptions): strin
 export interface ListOptions {
   theme: ThemeName;
   count: number;
+  /** 오른쪽 위 라벨 (기본 '최근 글') */
+  label?: string;
 }
 
 export function renderList(blog: Blog, posts: Post[], opts: ListOptions): string {
@@ -104,7 +106,7 @@ export function renderList(blog: Blog, posts: Post[], opts: ListOptions): string
   const DATE_W = 40;
   const titleW = RIGHT - DATE_W - 12 - TITLE_X;
 
-  const parts: string[] = [header(t, blog.host, '최근 글', RIGHT)];
+  const parts: string[] = [header(t, blog.host, opts.label ?? '최근 글', RIGHT)];
   rows.forEach((post, i) => {
     const top = 48 + 40 * i;
     const base = top + 25;
@@ -122,7 +124,7 @@ export function renderList(blog: Blog, posts: Post[], opts: ListOptions): string
     );
   });
 
-  return frame(t, H, `${blog.title || blog.host} 최근 글 ${rows.length}개`, parts.join('\n'));
+  return frame(t, H, `${blog.title || blog.host} ${opts.label ?? '최근 글'} ${rows.length}개`, parts.join('\n'));
 }
 
 export function renderMessage(themeName: ThemeName, host: string, message: string, detail: string): string {
