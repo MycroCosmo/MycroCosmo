@@ -6,6 +6,7 @@
  *
  * RSS를 못 읽으면 기존 카드를 그대로 두고 실패로 끝낸다(에러 카드로 덮어쓰지 않음).
  */
+import { createHash } from 'node:crypto';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, relative, dirname } from 'node:path';
 import { renderLatest, renderList } from './src/card.js';
@@ -22,6 +23,8 @@ const name = arg('name') ?? '';
 const outDir = arg('out') ?? 'out';
 const readmePath = arg('readme');
 const feedPath = arg('feed');
+/** README에서 쓸 이미지 주소의 앞부분. 없으면 README 기준 상대 경로 */
+const baseUrl = arg('base-url')?.replace(/\/+$/, '');
 const count = Math.min(5, Math.max(3, Number(arg('count')) || 5));
 
 if (!isValidName(name)) {
@@ -65,12 +68,16 @@ if (readmePath) {
   if (s < 0 || e < s) {
     console.error(`README에 ${START} / ${END} 표시가 없어 링크는 갱신하지 않았어요.`);
   } else {
-    // README 기준 상대 경로
-    const rel = relative(dirname(readmePath), outDir).split('\\').join('/');
+    const base = baseUrl ?? relative(dirname(readmePath), outDir).split('\\').join('/');
+    // 카드 내용이 바뀌면 주소도 바뀌게 해서 GitHub 이미지 캐시를 바로 갱신
+    const src = (file: string) => {
+      const v = createHash('sha1').update(files[file]).digest('hex').slice(0, 8);
+      return `${base}/${file}?v=${v}`;
+    };
     const blogUrl = `https://${blog.host}`;
     const postUrl = /^https:\/\/[a-z0-9.-]+\//i.test(latest.link) ? latest.link : blogUrl;
-    const picture = (file: string, alt: string) =>
-      `<picture><source media="(prefers-color-scheme: dark)" srcset="${rel}/${file}-dark.svg"><img src="${rel}/${file}-light.svg" alt="${escapeXml(alt)}" width="495"></picture>`;
+    const picture = (kind: string, alt: string) =>
+      `<picture><source media="(prefers-color-scheme: dark)" srcset="${src(`${kind}-dark.svg`)}"><img src="${src(`${kind}-light.svg`)}" alt="${escapeXml(alt)}" width="495"></picture>`;
     const block = [
       START,
       '<p>',

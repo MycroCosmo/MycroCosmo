@@ -35,7 +35,11 @@ jobs:
 
       - name: Generate cards
         working-directory: .github/tistory-card
-        run: npx tsx generate.ts --name 0and24 --out ../../assets/tistory --readme ../../README.md
+        run: >-
+          npx tsx generate.ts --name 0and24
+          --out ../../assets/tistory
+          --readme ../../README.md
+          --base-url "https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/assets/tistory"
 
       - name: Commit if changed
         run: |
