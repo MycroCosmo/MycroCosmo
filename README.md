@@ -34,11 +34,13 @@
 [0and24.tistory.com](https://0and24.tistory.com)에 개발하며 겪은 문제와 배운 것을 정리합니다.
 
 <!-- TISTORY-CARD:START -->
-<p>
-  <a href="https://0and24.tistory.com/80"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/main/assets/tistory/latest-dark.svg?v=3eda4708"><img src="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/main/assets/tistory/latest-light.svg?v=61b00a43" alt="최신 글: [Java/CS] 동기와 비동기, 블로킹과 논블로킹" width="495"></picture></a>
-  <br>
-  <a href="https://0and24.tistory.com"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/main/assets/tistory/list-dark.svg?v=30d9252b"><img src="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/main/assets/tistory/list-light.svg?v=956bc5ca" alt="0and24 | 개발&amp;middot;AI와 써본 것들 이전 글 목록" width="495"></picture></a>
-</p>
+<a href="https://0and24.tistory.com/80"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/tistory-card-links/assets/tistory/latest-dark.svg?v=29dc3ba2"><img src="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/tistory-card-links/assets/tistory/latest-light.svg?v=bbc4926a" alt="최신 글: [Java/CS] 동기와 비동기, 블로킹과 논블로킹" width="495" align="left"></picture></a>
+<a href="https://0and24.tistory.com"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/tistory-card-links/assets/tistory/older-header-dark.svg?v=3e5e5346"><img src="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/tistory-card-links/assets/tistory/older-header-light.svg?v=dc2b8440" alt="이전 글" width="495"></picture></a><br>
+<a href="https://0and24.tistory.com/79"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/tistory-card-links/assets/tistory/older-1-dark.svg?v=23a5d4ab"><img src="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/tistory-card-links/assets/tistory/older-1-light.svg?v=cabaca90" alt="[로컬로그 개발기 6] 둘이 처음 앱을 배포하고 나서야 보인 것들" width="495"></picture></a><br>
+<a href="https://0and24.tistory.com/78"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/tistory-card-links/assets/tistory/older-2-dark.svg?v=24083f02"><img src="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/tistory-card-links/assets/tistory/older-2-light.svg?v=16096b87" alt="[로컬로그 개발기 5] 테스트를 통과한 다음, 실제 사용할 환경에서 확인한 것들" width="495"></picture></a><br>
+<a href="https://0and24.tistory.com/77"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/tistory-card-links/assets/tistory/older-3-dark.svg?v=1e45d8ad"><img src="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/tistory-card-links/assets/tistory/older-3-light.svg?v=d0d6a3dd" alt="[로컬로그 개발기 4] 실제로 코스를 만들어 보니 설계에서 놓친 것이 보였다" width="495"></picture></a><br>
+<a href="https://0and24.tistory.com/76"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/tistory-card-links/assets/tistory/older-4-dark.svg?v=d2ee6416"><img src="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/tistory-card-links/assets/tistory/older-4-light.svg?v=fc68f75a" alt="[로컬로그 개발기 3] 관광지 데이터를 가져왔다고 바로 쓸 수는 없었다" width="495"></picture></a><br>
+<br clear="left">
 <!-- TISTORY-CARD:END -->
 
 ## Selected Projects

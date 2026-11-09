@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="36" viewBox="0 0 495 36" role="img" aria-labelledby="card-title">
+<title id="card-title">이전 글</title>
+<style>text{font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR','Noto Sans CJK KR',system-ui,sans-serif}</style>
+<text x="4" y="24" font-size="14" font-weight="700" fill="#C2410C">이전 글</text>
+<text x="491" y="24" font-size="12" fill="#59636E" text-anchor="end">0and24.tistory.com</text>
+<line x1="0" y1="35.5" x2="495" y2="35.5" stroke="#D9D6CF"/>
+</svg>
