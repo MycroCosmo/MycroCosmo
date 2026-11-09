@@ -18,7 +18,6 @@
 - **Backend** — Java · Spring Boot · Spring Framework
 - **Developer Tools** — MyBatis 반복 CRUD 자동화 · AI 코딩 에이전트 장애 기록
 - **Architecture** — 조회 성능, 서비스 경계, 외부 저장소와 DB의 정합성
-- **AI** — Spring AI와 OpenAI API를 연결한 챗봇 프로젝트
 
 ## Tech Stack
 
@@ -66,6 +65,3 @@ AI 코딩 에이전트를 위한 로컬 실행 기록 도구입니다. 개발 �
 
 [MSA Service](https://github.com/MycroCosmo/msa-service) · [Spring AI Chatbot](https://github.com/MycroCosmo/open-api-chat-project) · [ViewPort](https://github.com/MycroCosmo/mini_project_viewport)
 
-## Problem Solving
-
-[codetests](https://github.com/MycroCosmo/codetests)에서 Java로 작성한 백준 풀이를 기록합니다.
