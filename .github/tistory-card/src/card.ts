@@ -3,9 +3,15 @@ import { formatDate } from './rss.js';
 import { escapeXml as x, measure, truncate, wrap } from './text.js';
 import { FONT_FAMILY, THEMES, type Theme, type ThemeName } from './theme.js';
 
-const W = 495;
+let W = 495;
 const PAD_X = 22;
-const RIGHT = W - PAD_X; // 473
+let RIGHT = W - PAD_X;
+
+/** 카드 너비 설정 (기본 495). 프로필 README(약 830px)에 두 장을 나란히 놓을 때 400 정도로 줄인다 */
+export function setCardWidth(width: number): void {
+  W = Math.round(Math.min(495, Math.max(360, width)));
+  RIGHT = W - PAD_X;
+}
 
 function frame(t: Theme, h: number, label: string, body: string): string {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${h}" viewBox="0 0 ${W} ${h}" role="img" aria-labelledby="card-title">
@@ -35,7 +41,7 @@ export interface LatestOptions {
 export function renderLatest(blog: Blog, post: Post, opts: LatestOptions): string {
   const t = THEMES[opts.theme];
   const H = Math.max(195, opts.height ?? 195);
-  const THUMB = 120;
+  const THUMB = W < 450 ? 96 : 120;
   const hasThumb = Boolean(opts.thumbnail);
   const contentRight = hasThumb ? RIGHT - THUMB - 18 : RIGHT;
   const contentW = contentRight - PAD_X;
@@ -159,9 +165,9 @@ export function renderListHeader(themeName: ThemeName, host: string, label: stri
 
 export function renderRow(themeName: ThemeName, post: Post): string {
   const t = THEMES[themeName];
-  const CAT_W = 64;
+  const CAT_W = W < 450 ? 56 : 64;
   const TITLE_X = 4 + CAT_W + 12;
-  const DATE_W = 40;
+  const DATE_W = 36;
   const titleW = W - 4 - DATE_W - 12 - TITLE_X;
   const base = 27;
   const parts: string[] = [];
