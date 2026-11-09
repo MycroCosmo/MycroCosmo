@@ -14,7 +14,7 @@
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, readdirSync, unlinkSync, writeFileSync } from 'node:fs';
 import { dirname, extname, join, relative } from 'node:path';
-import { renderLatest, renderListHeader, renderRow } from './src/card.js';
+import { renderLatest, renderListHeader, renderRow, setCardWidth } from './src/card.js';
 import { toDataUri } from './src/image.js';
 import { fetchBlog, isValidName, parseFeed, type Blog } from './src/rss.js';
 import { escapeXml } from './src/text.js';
@@ -31,6 +31,12 @@ const feedPath = arg('feed');
 const thumbFile = arg('thumb-file');
 /** README에서 쓸 이미지 주소의 앞부분. 없으면 README 기준 상대 경로 */
 const baseUrl = arg('base-url')?.replace(/\/+$/, '');
+/**
+ * 카드 너비. 프로필 README 본문 폭이 약 830px라
+ * 최신 글 카드(400 + 여백 20) + 목록(400) = 820px가 되도록 기본 400
+ */
+const cardWidth = Math.min(495, Math.max(360, Number(arg('width')) || 400));
+setCardWidth(cardWidth);
 /** 오른쪽에 보여줄 이전 글 개수 */
 const more = Math.min(5, Math.max(1, Number(arg('more')) || 4));
 
@@ -102,13 +108,13 @@ if (readmePath && existsSync(readmePath)) {
 
     const lines = [
       START,
-      `<a href="${escapeXml(safeUrl(latest.link))}">${picture('latest', `최신 글: ${latest.title}`, ' width="495" align="left"')}</a>`,
+      `<a href="${escapeXml(safeUrl(latest.link))}">${picture('latest', `최신 글: ${latest.title}`, ` width="${cardWidth}" align="left"`)}</a>`,
     ];
     if (older.length) {
-      lines.push(`<a href="${blogUrl}">${picture('older-header', '이전 글', ' width="495"')}</a><br>`);
+      lines.push(`<a href="${blogUrl}">${picture('older-header', '이전 글', ` width="${cardWidth}"`)}</a><br>`);
       older.forEach((post, i) => {
         lines.push(
-          `<a href="${escapeXml(safeUrl(post.link))}">${picture(`older-${i + 1}`, post.title, ' width="495"')}</a><br>`,
+          `<a href="${escapeXml(safeUrl(post.link))}">${picture(`older-${i + 1}`, post.title, ` width="${cardWidth}"`)}</a><br>`,
         );
       });
     }
