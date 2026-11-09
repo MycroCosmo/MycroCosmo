@@ -9,9 +9,9 @@
 import { createHash } from 'node:crypto';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, relative, dirname } from 'node:path';
-import { renderLatest } from './src/card.js';
+import { renderLatest, renderList } from './src/card.js';
 import { toDataUri } from './src/image.js';
-import { fetchBlog, formatDate, isValidName, parseFeed, type Blog } from './src/rss.js';
+import { fetchBlog, isValidName, parseFeed, type Blog } from './src/rss.js';
 import { escapeXml } from './src/text.js';
 
 function arg(name: string): string | undefined {
@@ -25,8 +25,8 @@ const readmePath = arg('readme');
 const feedPath = arg('feed');
 /** README에서 쓸 이미지 주소의 앞부분. 없으면 README 기준 상대 경로 */
 const baseUrl = arg('base-url')?.replace(/\/+$/, '');
-/** 카드 아래 텍스트 목록에 보여줄 이전 글 개수 */
-const more = Math.min(10, Math.max(0, Number(arg('more') ?? 4)));
+/** 목록 카드에 보여줄 이전 글 개수 (최신 글은 위 카드에 있으므로 제외) */
+const more = Math.min(5, Math.max(3, Number(arg('more')) || 4));
 
 if (!isValidName(name)) {
   console.error(`블로그 아이디가 올바르지 않아요: "${name}"`);
@@ -54,6 +54,8 @@ mkdirSync(outDir, { recursive: true });
 const files: Record<string, string> = {};
 for (const theme of ['light', 'dark'] as const) {
   files[`latest-${theme}.svg`] = renderLatest(blog, latest, { theme, thumbnail });
+  const older = blog.posts.slice(1);
+  if (older.length) files[`list-${theme}.svg`] = renderList(blog, older, { theme, count: more, label: '이전 글' });
 }
 for (const [file, svg] of Object.entries(files)) {
   writeFileSync(join(outDir, file), svg);
@@ -78,17 +80,15 @@ if (readmePath) {
     const safeUrl = (u: string) => (/^https:\/\/[a-z0-9.-]+\//i.test(u) ? u : blogUrl);
     const picture = (kind: string, alt: string) =>
       `<picture><source media="(prefers-color-scheme: dark)" srcset="${src(`${kind}-dark.svg`)}"><img src="${src(`${kind}-light.svg`)}" alt="${escapeXml(alt)}" width="495"></picture>`;
-    // 최신 글은 카드, 이전 글은 GitHub 기본 글씨의 링크 목록(각각 클릭 가능, 높이 절약)
-    const rest = blog.posts.slice(1, 1 + more).map(
-      (p) =>
-        `  <li><a href="${escapeXml(safeUrl(p.link))}">${escapeXml(p.title)}</a> <sub>${formatDate(p.publishedAt, true)}</sub></li>`,
-    );
-    const block = [
-      START,
-      `<a href="${escapeXml(safeUrl(latest.link))}">${picture('latest', `최신 글: ${latest.title}`)}</a>`,
-      ...(rest.length ? ['', '<ul>', ...rest, '</ul>'] : []),
-      END,
-    ].join('\n');
+    // README 본문 폭(약 830px)에는 카드 두 장이 나란히 안 들어가므로 위아래로 쌓는다.
+    // 최신 글 카드는 그 글로, 이전 글 카드는 블로그 홈으로 연결.
+    const cards = [
+      `  <a href="${escapeXml(safeUrl(latest.link))}">${picture('latest', `최신 글: ${latest.title}`)}</a>`,
+    ];
+    if (files['list-light.svg']) {
+      cards.push('  <br>', `  <a href="${blogUrl}">${picture('list', `${blog.title || blog.host} 이전 글 목록`)}</a>`);
+    }
+    const block = [START, '<p>', ...cards, '</p>', END].join('\n');
     writeFileSync(readmePath, readme.slice(0, s) + block + readme.slice(e + END.length));
   }
 }
