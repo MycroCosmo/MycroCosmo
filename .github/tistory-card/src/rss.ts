@@ -29,8 +29,9 @@ export function isValidName(name: string): boolean {
 
 const parser = new XMLParser({
   ignoreAttributes: true,
-  processEntities: true,
-  htmlEntities: false,
+  // 티스토리 RSS 본문은 HTML이 통째로 이스케이프돼 있어 엔티티가 수천 개다.
+  // 파서의 엔티티 처리(개수 제한 1000개)를 끄고 직접 디코딩한다.
+  processEntities: false,
   isArray: (tagName) => tagName === 'item' || tagName === 'category',
 });
 
@@ -65,12 +66,12 @@ export function parseFeed(xml: string, name: string): Blog {
   const items: unknown[] = Array.isArray(channel.item) ? channel.item : [];
   const posts: Post[] = items.map((raw) => {
     const it = raw as Record<string, unknown>;
-    const html = str(it.description);
-    const categories = Array.isArray(it.category) ? it.category.map(str) : [];
+    const html = decodeEntities(str(it.description));
+    const categories = Array.isArray(it.category) ? it.category.map((c: unknown) => decodeEntities(str(c))) : [];
     const date = new Date(str(it.pubDate));
     return {
       title: decodeEntities(str(it.title)).trim() || '(제목 없음)',
-      link: str(it.link),
+      link: decodeEntities(str(it.link)).trim(),
       summary: htmlToText(html),
       category: shortCategory(categories[0] ?? ''),
       imageUrl: firstImage(html),
