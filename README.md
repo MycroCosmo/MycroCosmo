@@ -60,7 +60,7 @@ AI 코딩 에이전트를 위한 로컬 실행 기록 도구입니다. 개발 �
 
 <!-- TISTORY-CARD:START -->
 <p>
-  <a href="https://0and24.tistory.com/1"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/main/assets/tistory/latest-dark.svg?v=1862f789"><img src="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/main/assets/tistory/latest-light.svg?v=443e12b8" alt="최신 글: [Java/CS] 동기와 비동기, 블로킹과 논블로킹" width="495"></picture></a>
+  <a href="https://0and24.tistory.com/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/main/assets/tistory/latest-dark.svg?v=1862f789"><img src="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/main/assets/tistory/latest-light.svg?v=443e12b8" alt="최신 글: [Java/CS] 동기와 비동기, 블로킹과 논블로킹" width="495"></picture></a>
   <a href="https://0and24.tistory.com"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/main/assets/tistory/list-dark.svg?v=971b7ce7"><img src="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/main/assets/tistory/list-light.svg?v=677ac80d" alt="0and24 | 개발·AI와 써본 것들 최근 글 목록" width="495"></picture></a>
 </p>
 <!-- TISTORY-CARD:END -->
