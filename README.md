@@ -59,13 +59,13 @@ AI 코딩 에이전트를 위한 로컬 실행 기록 도구입니다. 개발 �
 [0and24.tistory.com](https://0and24.tistory.com)에 개발하며 겪은 문제와 배운 것을 정리합니다.
 
 <!-- TISTORY-CARD:START -->
-<a href="https://0and24.tistory.com/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/main/assets/tistory/latest-dark.svg?v=1862f789"><img src="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/main/assets/tistory/latest-light.svg?v=443e12b8" alt="최신 글: [Java/CS] 동기와 비동기, 블로킹과 논블로킹" width="495"></picture></a>
+<a href="https://0and24.tistory.com/80"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/main/assets/tistory/latest-dark.svg?v=3eda4708"><img src="https://raw.githubusercontent.com/MycroCosmo/MycroCosmo/main/assets/tistory/latest-light.svg?v=61b00a43" alt="최신 글: [Java/CS] 동기와 비동기, 블로킹과 논블로킹" width="495"></picture></a>
 
 <ul>
-  <li><a href="https://0and24.tistory.com/">[로컬로그 개발기 6] 둘이 처음 앱을 배포하고 나서야 보인 것들</a> <sub>10.29</sub></li>
-  <li><a href="https://0and24.tistory.com/">[로컬로그 개발기 5] 테스트를 통과한 다음, 실제 사용할 환경에서 확인한 것들</a> <sub>10.29</sub></li>
-  <li><a href="https://0and24.tistory.com/">[로컬로그 개발기 4] 실제로 코스를 만들어 보니 설계에서 놓친 것이 보였다</a> <sub>10.28</sub></li>
-  <li><a href="https://0and24.tistory.com/">[로컬로그 개발기 3] 관광지 데이터를 가져왔다고 바로 쓸 수는 없었다</a> <sub>10.28</sub></li>
+  <li><a href="https://0and24.tistory.com/79">[로컬로그 개발기 6] 둘이 처음 앱을 배포하고 나서야 보인 것들</a> <sub>10.29</sub></li>
+  <li><a href="https://0and24.tistory.com/78">[로컬로그 개발기 5] 테스트를 통과한 다음, 실제 사용할 환경에서 확인한 것들</a> <sub>10.29</sub></li>
+  <li><a href="https://0and24.tistory.com/77">[로컬로그 개발기 4] 실제로 코스를 만들어 보니 설계에서 놓친 것이 보였다</a> <sub>10.28</sub></li>
+  <li><a href="https://0and24.tistory.com/76">[로컬로그 개발기 3] 관광지 데이터를 가져왔다고 바로 쓸 수는 없었다</a> <sub>10.28</sub></li>
 </ul>
 <!-- TISTORY-CARD:END -->
 
