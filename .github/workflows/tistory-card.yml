@@ -1,0 +1,50 @@
+name: Tistory card
+
+on:
+  schedule:
+    - cron: '17 * * * *' # 매시간 17분 (새 글이 없으면 커밋하지 않음)
+  workflow_dispatch: # Actions 탭에서 바로 실행
+  push:
+    branches: [main]
+    paths:
+      - '.github/tistory-card/**'
+      - '.github/workflows/tistory-card.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tistory-card
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: .github/tistory-card/package-lock.json
+
+      - name: Install
+        working-directory: .github/tistory-card
+        run: npm ci --no-audit --no-fund
+
+      - name: Generate cards
+        working-directory: .github/tistory-card
+        run: npx tsx generate.ts --name 0and24 --out ../../assets/tistory --readme ../../README.md
+
+      - name: Commit if changed
+        run: |
+          git add assets/tistory README.md
+          if git diff --cached --quiet; then
+            echo "변경 없음"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: 티스토리 카드 갱신"
+          git push

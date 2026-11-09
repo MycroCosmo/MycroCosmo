@@ -54,6 +54,17 @@ AI 코딩 에이전트를 위한 로컬 실행 기록 도구입니다. 개발 �
 
 [MSA Service](https://github.com/MycroCosmo/msa-service) · [Spring AI Chatbot](https://github.com/MycroCosmo/open-api-chat-project) · [ViewPort](https://github.com/MycroCosmo/mini_project_viewport)
 
+## Blog
+
+[0and24.tistory.com](https://0and24.tistory.com)에 개발하며 겪은 문제와 배운 것을 정리합니다.
+
+<!-- TISTORY-CARD:START -->
+<p>
+  <a href="https://0and24.tistory.com/1"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/tistory/latest-dark.svg"><img src="assets/tistory/latest-light.svg" alt="최신 글: [Java/CS] 동기와 비동기, 블로킹과 논블로킹" width="495"></picture></a>
+  <a href="https://0and24.tistory.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/tistory/list-dark.svg"><img src="assets/tistory/list-light.svg" alt="0and24 | 개발·AI와 써본 것들 최근 글 목록" width="495"></picture></a>
+</p>
+<!-- TISTORY-CARD:END -->
+
 ## Problem Solving
 
 [codetests](https://github.com/MycroCosmo/codetests)에서 Java로 작성한 백준 풀이를 기록합니다.
