@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" role="img" aria-labelledby="card-title">
+<title id="card-title">0and24 | 개발·AI와 써본 것들 최신 글: [Java/CS] 동기와 비동기, 블로킹과 논블로킹</title>
+<style>text{font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR','Noto Sans CJK KR',system-ui,sans-serif}</style>
+<rect x="0.5" y="0.5" width="494" height="194" rx="10" fill="#0D1117" stroke="#30363D"/>
+<circle cx="26" cy="28" r="4" fill="#F0883E"/>
+<text x="38" y="32" font-size="12" fill="#9198A1">0and24.tistory.com</text>
+<text x="473" y="32" font-size="12" font-weight="600" fill="#F0883E" text-anchor="end">최신 글</text>
+<text x="22" y="66" font-size="18" font-weight="700" fill="#E6EDF3">[Java/CS] 동기와 비동기, 블로킹과 논블로킹</text>
+<rect x="22" y="152" width="32" height="22" rx="11" fill="#2D1E12"/>
+<text x="30" y="167" font-size="12" font-weight="600" fill="#F0883E">CS</text>
+<text x="62" y="167" font-size="12" fill="#9198A1">2026.11.09</text>
+</svg>
