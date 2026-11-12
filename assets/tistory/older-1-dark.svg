@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="44" viewBox="0 0 400 44" role="img" aria-labelledby="card-title">
-<title id="card-title">[로컬로그 개발기 6] 둘이 처음 앱을 배포하고 나서야 보인 것들</title>
+<title id="card-title">[Java/CS] 동기와 비동기, 블로킹과 논블로킹</title>
 <style>text{font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR','Noto Sans CJK KR',system-ui,sans-serif}</style>
-<text x="4" y="27" font-size="11" font-weight="600" fill="#F0883E">개발&amp;mi…</text>
-<text x="72" y="27" font-size="14" fill="#E6EDF3">[로컬로그 개발기 6] 둘이 처음 앱을 배포하…</text>
-<text x="396" y="27" font-size="12" fill="#9198A1" text-anchor="end">10.29</text>
+<text x="4" y="27" font-size="11" font-weight="600" fill="#F0883E">CS</text>
+<text x="72" y="27" font-size="14" fill="#E6EDF3">[Java/CS] 동기와 비동기, 블로킹과 논블…</text>
+<text x="396" y="27" font-size="12" fill="#9198A1" text-anchor="end">11.09</text>
 <line x1="0" y1="43.5" x2="400" y2="43.5" stroke="#21262D"/>
 </svg>
