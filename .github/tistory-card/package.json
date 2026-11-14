@@ -4,7 +4,8 @@
   "description": "티스토리 최신 글 카드를 프로필 README에 넣는 생성 스크립트",
   "type": "module",
   "scripts": {
-    "generate": "tsx generate.ts"
+    "generate": "tsx generate.ts",
+    "test": "tsx --test src/*.test.ts"
   },
   "dependencies": {
     "fast-xml-parser": "^4.5.0",

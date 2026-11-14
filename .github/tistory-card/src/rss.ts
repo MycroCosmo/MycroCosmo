@@ -52,6 +52,11 @@ function firstImage(html: string): string | null {
   return /^https?:\/\//i.test(url) ? url.replace(/^http:/i, 'https:') : null;
 }
 
+function feedText(value: unknown): string {
+  // RSS의 XML 이스케이프를 푼 뒤 티스토리 텍스트의 HTML 엔티티를 푼다.
+  return decodeEntities(decodeEntities(str(value))).trim();
+}
+
 /** "개발/Spring" 같은 계층 카테고리는 마지막 칸만 */
 function shortCategory(raw: string): string {
   const parts = raw.split('/').map((s) => s.trim()).filter(Boolean);
@@ -67,10 +72,10 @@ export function parseFeed(xml: string, name: string): Blog {
   const posts: Post[] = items.map((raw) => {
     const it = raw as Record<string, unknown>;
     const html = decodeEntities(str(it.description));
-    const categories = Array.isArray(it.category) ? it.category.map((c: unknown) => decodeEntities(str(c))) : [];
+    const categories = Array.isArray(it.category) ? it.category.map(feedText) : [];
     const date = new Date(str(it.pubDate));
     return {
-      title: decodeEntities(str(it.title)).trim() || '(제목 없음)',
+      title: feedText(it.title) || '(제목 없음)',
       link: decodeEntities(str(it.link)).trim(),
       summary: htmlToText(html),
       category: shortCategory(categories[0] ?? ''),
@@ -81,7 +86,7 @@ export function parseFeed(xml: string, name: string): Blog {
 
   return {
     name,
-    title: decodeEntities(str(channel.title)).trim(),
+    title: feedText(channel.title),
     host: `${name}.tistory.com`,
     posts,
   };
