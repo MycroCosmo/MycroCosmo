@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="228" viewBox="0 0 400 228" role="img" aria-labelledby="card-title">
-<title id="card-title">0and24 | 개발·AI와 써본 것들 최신 글: [우리언제 개발기 1] 가입은 없애도, 누가 입력했는지는 알아야 했다</title>
+<title id="card-title">0and24 | 개발·AI와 써본 것들 최신 글: [우리언제 개발기 1] 회원가입 없는 앱에서 입력자 구분하기</title>
 <style>text{font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR','Noto Sans CJK KR',system-ui,sans-serif}</style>
 <rect x="0.5" y="0.5" width="399" height="227" rx="10" fill="#0D1117" stroke="#30363D"/>
 <circle cx="26" cy="28" r="4" fill="#F0883E"/>
 <text x="38" y="32" font-size="12" fill="#9198A1">0and24.tistory.com</text>
 <text x="264" y="32" font-size="12" font-weight="600" fill="#F0883E" text-anchor="end">최신 글</text>
-<text x="22" y="66" font-size="18" font-weight="700" fill="#E6EDF3">[우리언제 개발기 1] 가입은</text>
-<text x="22" y="90" font-size="18" font-weight="700" fill="#E6EDF3">없애도, 누가 입력했는지는…</text>
+<text x="22" y="66" font-size="18" font-weight="700" fill="#E6EDF3">[우리언제 개발기 1]</text>
+<text x="22" y="90" font-size="18" font-weight="700" fill="#E6EDF3">회원가입 없는 앱에서 입력…</text>
 <text x="22" y="115" font-size="13" fill="#9198A1">우리언제는 가능한 시간을 모으고, 장소를</text>
 <text x="22" y="134.5" font-size="13" fill="#9198A1">투표하고, 모임 뒤 정산까지 이어 가는 서…</text>
 <rect x="22" y="185" width="62" height="22" rx="11" fill="#2D1E12"/>
