@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="44" viewBox="0 0 400 44" role="img" aria-labelledby="card-title">
-<title id="card-title">테스트 통과 후 실제 환경에서 검증한 것들 [로컬로그 개발기 5]</title>
+<title id="card-title">첫 앱 배포 후 알게 된 것들 [로컬로그 개발기 6]</title>
 <style>text{font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR','Noto Sans CJK KR',system-ui,sans-serif}</style>
 <text x="4" y="27" font-size="11" font-weight="600" fill="#F0883E">개발·IT</text>
-<text x="72" y="27" font-size="14" fill="#E6EDF3">테스트 통과 후 실제 환경에서 검증한 것들…</text>
+<text x="72" y="27" font-size="14" fill="#E6EDF3">첫 앱 배포 후 알게 된 것들 [로컬로그 개발…</text>
 <text x="396" y="27" font-size="12" fill="#9198A1" text-anchor="end">10.29</text>
 <line x1="0" y1="43.5" x2="400" y2="43.5" stroke="#21262D"/>
 </svg>
